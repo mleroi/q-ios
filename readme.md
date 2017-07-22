@@ -1,5 +1,5 @@
 <!--
-Theme Name: Q for iOS
+Theme Name: Q for iOS - Offline form demo
 Description: A clean and simple iOS app news theme featuring: back button, content refresh, custom post types, embeds, infinite list, network detection, off-canvas menu, offline content, pages, posts, responsive, touch, transitions
 Version: 1.0.4
 Theme URI: https://github.com/uncatcrea/q-ios/

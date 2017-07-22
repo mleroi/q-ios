@@ -1,0 +1,42 @@
+<div id="content" class="content single-template">
+
+    <div class="post-title">
+        <h1>Forms waiting for submission</h1>
+    </div>
+
+    <div id="single-content" class="single-content">
+
+        <% number_forms_waiting_sync = forms_waiting_sync.length; %>
+        
+        <p>
+            <%= number_forms_waiting_sync > 0 ? number_forms_waiting_sync : 'No' %> form submission<%= number_forms_waiting_sync > 1 ? 's' : '' %> 
+            waiting for sync with server<%= number_forms_waiting_sync > 0 ? ':' : '.' %> 
+            <% if ( number_forms_waiting_sync > 0 ) { %>
+                <ul>
+                    <% _.each( forms_waiting_sync, function( form_data ) { %>
+                        <li><%= form_data.firstname %> <%= form_data.lastname %></li>
+                    <% } ); %>
+                </ul>
+            <% } %>
+        </p>
+        
+        <% if ( number_forms_waiting_sync > 0 ) { %>
+            <% if ( online ) { %>
+            
+                    <p>
+                        <a href="#" class="sync-now">Sync form submissions now</a>
+                    </p>
+
+            <% } else { %>
+
+                <p>
+                    You're currently offline.<br>
+                    You'll be able to sync those form submissions as soon as you'll be online.
+                </p>
+
+            <% } %>
+        <% } %>
+
+    </div>
+        
+</div>
